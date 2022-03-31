@@ -10,6 +10,11 @@ def call(String repoUrl) {
             url: "${repoUrl}"
         }
       }
+      stage("build") {
+        steps {
+          ./gradlew clean build
+        }
+      }
     }
   }
 }
