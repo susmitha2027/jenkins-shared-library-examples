@@ -12,7 +12,7 @@ def call(String repoUrl) {
       }
       stage("build") {
         steps {
-          ./gradlew clean build
+          bat './gradlew clean build'
         }
       }
     }
