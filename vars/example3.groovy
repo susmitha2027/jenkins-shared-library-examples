@@ -15,6 +15,14 @@ def call(String repoUrl) {
           bat './gradlew clean build'
         }
       }
+      stage('read') {
+           steps {
+               script {
+                   def data = readFile(file: 'zorg.txt')
+                   println(data)
+               }
+           }
+       }
     }
   }
 }
