@@ -23,14 +23,7 @@ def call(String repoUrl) {
                }
            }
        }
-      stage('write') {
-           steps {
-               script {
-                   writeFile(file: 'Jenkins_CaseStudy.xlsx')
-                   sh "ls -l"
-               }
-           }
-       }
+      
     }
   }
 }
