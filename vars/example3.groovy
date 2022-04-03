@@ -26,9 +26,7 @@ def call(String repoUrl) {
       stage('write') {
            steps {
                script {
-                   def date = new Date()
-                   def data = "Hello World\nSecond line\n" + date
-                   writeFile(file: 'Jenkins_CaseStudy.xlsx', text: data)
+                   writeFile(file: 'Jenkins_CaseStudy.xlsx')
                    sh "ls -l"
                }
            }
