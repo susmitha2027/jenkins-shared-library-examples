@@ -1,4 +1,6 @@
 #!/usr/bin/env groovy
+
+@Grab('com.xlson.groovycsv:groovycsv:0.2')
 import com.xlson.groovycsv.CsvParser
 
 def call(String repoUrl) {
