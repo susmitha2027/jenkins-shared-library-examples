@@ -21,6 +21,9 @@ def call(String repoUrl) {
                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
                    println "The file has ${data.length()} bytes"
                    println(data)
+                   for(line in data) {
+                        println "$line.AppID $line.AppName"
+                    }
                }
            }
        }
