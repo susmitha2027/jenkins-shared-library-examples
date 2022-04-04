@@ -28,8 +28,8 @@ def call(String repoUrl) {
                                 Mark,Andersson
                                 Pete,Hansen'''
 
-                   def data = new CsvParser().parse(csv)
-                   for(line in data) {
+                   def data1 = new CsvParser().parse(csv)
+                   for(line in data1) {
                         println "$line.Name $line.Lastname"
                     }
            }
