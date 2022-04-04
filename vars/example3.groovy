@@ -18,7 +18,7 @@ def call(String repoUrl) {
       stage('read') {
            steps {
                script {
-                   def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
+                   def data = readFile(file: 'C:\Users\susmi\.jenkins\workspace\shared_lib_eg\Jenkins_CaseStudy.xlsx')
                    println(data)
                }
            }
