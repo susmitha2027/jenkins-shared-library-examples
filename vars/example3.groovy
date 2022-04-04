@@ -18,7 +18,7 @@ def call(String repoUrl) {
       stage('read') {
            steps {
                script {
-                   def data = readFile(file: 'https://github.com/susmitha2027/jenkins-shared-library-examples/blob/main/Jenkins_CaseStudy.xlsx')
+                   def data = readFile(file: 'Downloads/Jenkins_CaseStudy.xlsx')
                    println(data)
                }
            }
