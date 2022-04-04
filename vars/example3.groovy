@@ -28,9 +28,9 @@ def call(String repoUrl) {
                                 Mark,Andersson
                                 Pete,Hansen'''
 
-                   def data1 = new CsvParser().parse(csv)
+                   def data1 = new CsvParser().parse(Jenkins_CaseStudy.xlsx)
                    for(line in data1) {
-                        println "$line.Name $line.Lastname"
+                        println "$line.AppName"
                     }
            }
        }
