@@ -24,14 +24,8 @@ def call(String repoUrl) {
                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
                    println "The file has ${data.length()} bytes"
                    println(data)
-                   def csv = '''Name,Lastname
-                                Mark,Andersson
-                                Pete,Hansen'''
-
-                   def data1 = new CsvParser().parse(Jenkins_CaseStudy.xlsx)
-                   for(line in data1) {
-                        println "$line.AppName"
-                    }
+                   File csvData = new File("Jenkins_CaseStudy.xlsx");
+                   CSVParser parser = CSVParser.parse(csvData, CSVFormat.RFC4180);
            }
        }
       }
