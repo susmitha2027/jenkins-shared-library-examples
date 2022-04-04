@@ -26,7 +26,7 @@ def call(String repoUrl) {
                    println(data)
                    def data1 = new CsvParser().parse(data)
                    for(line in data1) {
-                        println "$line.AppID $line.AppName"
+                        println "$line.AppName"
                     }
                }
            }
