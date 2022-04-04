@@ -19,6 +19,7 @@ def call(String repoUrl) {
            steps {
                script {
                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
+                   println "The file ${data.absolutePath} has ${data.length()} bytes"
                    println(data)
                }
            }
