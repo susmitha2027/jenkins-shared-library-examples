@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+import com.xlson.groovycsv.CsvParser
 
 def call(String repoUrl) {
   pipeline {
