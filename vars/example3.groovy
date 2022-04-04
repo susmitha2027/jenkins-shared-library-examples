@@ -28,10 +28,13 @@ def call(String repoUrl) {
                                 Mark,Andersson
                                 Pete,Hansen'''
 
-                   def data1 = new CsvParser().parse(csv)
-                   for(line in data1) {
-                        println "$line.Name $line.Lastname"
+                   def myFile = new File('example.txt')
+                    def myScanner = new Scanner(myFile)
+                    while (myScanner.hasNextLine()) {
+                    def line = myScanner.nextLine()
+                    println(line)
                     }
+                  myScanner.close()
            }
        }
       }
