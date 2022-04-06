@@ -22,19 +22,16 @@ def call(String repoUrl) {
            steps {
                script {
                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
-                   println "The file $data has ${data.length()} bytes"
-                 //  println(data)
+                   println "The file has ${data.length()} bytes"
+                   println(data)
                    def csv = '''Name,Lastname
                                 Mark,Andersson
                                 Pete,Hansen'''
 
-                   def myFile = new File('example.txt')
-                    def myScanner = new Scanner(myFile)
-                    while (myScanner.hasNextLine()) {
-                    def line = myScanner.nextLine()
-                    println(line)
+                   def data1 = new CsvParser().parse(csv)
+                   for(line in data1) {
+                        println "$line.Name $line.Lastname"
                     }
-                  myScanner.close()
            }
        }
       }
