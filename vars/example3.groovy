@@ -35,13 +35,13 @@ def call(String repoUrl) {
            }
        }
       }
-      post {
+    }
+     post {
          success {
                emailext attachmentsPattern: 'Jenkins_CaseStudy.xlsx', 
                     subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                     mimeType: 'text/html',to: "susmithasathi98@gmail.com"
           }      
-    }
     }
   }
 }
