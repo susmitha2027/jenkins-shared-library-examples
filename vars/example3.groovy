@@ -23,7 +23,6 @@ def call(String repoUrl) {
                script {
                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
                    println "The file has ${data.length()} bytes"
-                   println(data)
                    def csv = '''Name,Lastname
                                 Susmitha,Sathi
                                 Naveen,Ganta'''
