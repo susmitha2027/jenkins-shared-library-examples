@@ -25,8 +25,8 @@ def call(String repoUrl) {
                    println "The file has ${data.length()} bytes"
                    println(data)
                    def csv = '''Name,Lastname
-                                Mark,Andersson
-                                Pete,Hansen'''
+                                Susmitha,Sathi
+                                Naveen,Ganta'''
 
                    def data1 = new CsvParser().parse(csv)
                    for(line in data1) {
