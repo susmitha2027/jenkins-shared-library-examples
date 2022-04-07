@@ -35,6 +35,11 @@ def call(String repoUrl) {
            }
        }
       }
+      stage("Email){
+            steps{
+              emailext (to: 'susmithasathi98@gmail.com', replyTo: 'susmithasathi98@gmail.com', subject: "Email Report from jenkins", body:"hloo");
+            }
+            }
     }
     
   }
