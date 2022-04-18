@@ -40,7 +40,18 @@ def call(String repoUrl) {
       }
       stage("Email"){
             steps{
-             emailext body: '''Hello Your email has configured successfully!!!''', subject: 'Hi This is for email configuration in jenkins', to: 'susmithasathi98@gmail.com'
+              mail(
+        bcc: '',
+        body: "<p>your body</p>",
+        cc: '',
+        charset: 'UTF-8',
+        from: 'susmithasathi98@gmail.com',
+        mimeType: 'text/html',
+        replyTo: '',
+        subject: "your subject",
+        to: "susmithasathi98@gmail.com"
+)
+             //emailext body: '''Hello Your email has configured successfully!!!''', subject: 'Hi This is for email configuration in jenkins', to: 'susmithasathi98@gmail.com'
             }
             }
     }
