@@ -15,17 +15,20 @@ def call(String repoUrl) {
       }
       stage("build") {
         steps {
-          bat './gradlew clean build'
+         // bat './gradlew clean build'
         }
       }
       stage('read') {
            steps {
                script {
                    
-                    def data = readCSV file: 'Jenkins_CaseStudy.xlsx',format:excelFormat
-                    def op = data.toString()
+                   // def data = readCSV file: 'Jenkins_CaseStudy.xlsx',format:excelFormat
+                   // def op = data.toString()
+                    def excelFormat = CSVFormat.EXCEL
+                    def records = readCSV file: 'Jenkins_CaseStudy.xlsx', format: excelFormat
+                    def op = records.toString()
                     println(op)
-                    println(data)
+                    println(records)
                    //println "The file has ${data.length()} bytes"
 //                    def csv = '''Name,Lastname
 //                                 Susmitha,Sathi
