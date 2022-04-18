@@ -21,10 +21,11 @@ def call(String repoUrl) {
                    // def data = readCSV file: 'Jenkins_CaseStudy.xlsx',format:excelFormat
                    // def op = data.toString()
                     //def excelFormat = CSVFormat.EXCEL
-                    def records = readCSV file: 'Jenkins_CaseStudy.xlsx'
-                    def op = records.toString()
+                    def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
+                  //  def records = readCSV file: 'Jenkins_CaseStudy.xlsx'
+                    def op = data.toString()
                     println(op)
-                    println(records)
+                   // println(records)
                    //println "The file has ${data.length()} bytes"
 //                    def csv = '''Name,Lastname
 //                                 Susmitha,Sathi
