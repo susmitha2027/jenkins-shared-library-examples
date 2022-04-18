@@ -21,7 +21,8 @@ def call(String repoUrl) {
       stage('read') {
            steps {
                script {
-                   def data = readFile(file: 'Jenkins_CaseStudy.xlsx')
+                   
+                    def data = readCSV file: 'Jenkins_CaseStudy.xlsx')
                     println(data)
                    println "The file has ${data.length()} bytes"
                    def csv = '''Name,Lastname
