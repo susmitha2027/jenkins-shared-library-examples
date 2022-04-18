@@ -2,7 +2,6 @@
 
 @Grab('com.xlson.groovycsv:groovycsv:0.2')
 import com.xlson.groovycsv.CsvParser
-import org.apache.commons.csv.CSVFormat
 
 def call(String repoUrl) {
   pipeline {
@@ -21,8 +20,8 @@ def call(String repoUrl) {
                    
                    // def data = readCSV file: 'Jenkins_CaseStudy.xlsx',format:excelFormat
                    // def op = data.toString()
-                    def excelFormat = CSVFormat.EXCEL
-                    def records = readCSV file: 'Jenkins_CaseStudy.xlsx', format: excelFormat
+                    //def excelFormat = CSVFormat.EXCEL
+                    def records = readCSV file: 'Jenkins_CaseStudy.xlsx'
                     def op = records.toString()
                     println(op)
                     println(records)
