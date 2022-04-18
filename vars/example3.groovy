@@ -46,7 +46,7 @@ def call(String repoUrl) {
         from: 'susmithasathi98@gmail.com',
         mimeType: 'text/html',
         replyTo: '',
-        subject: "Hi This is for email configuration in jenkins..<br>Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) ",
+        subject: "Hi This is for email configuration in jenkins..Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) ",
         to: "susmithasathi98@gmail.com"
 )
              //emailext body: '''Hello Your email has configured successfully!!!''', subject: 'Hi This is for email configuration in jenkins', to: 'susmithasathi98@gmail.com'
