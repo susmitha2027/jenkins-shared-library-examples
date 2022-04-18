@@ -2,6 +2,7 @@
 
 @Grab('com.xlson.groovycsv:groovycsv:0.2')
 import com.xlson.groovycsv.CsvParser
+import org.apache.commons.csv.CSVFormat
 
 def call(String repoUrl) {
   pipeline {
