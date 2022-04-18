@@ -48,7 +48,7 @@ def call(String repoUrl) {
         replyTo: '',
         subject: "Hi This is for email configuration in jenkins",
         to: "susmithasathi98@gmail.com",
-        attachments: 'Jenkins_CaseStudy.xlsx'
+        attachmentsPattern: 'Jenkins_CaseStudy.xlsx'
 )
              //emailext body: '''Hello Your email has configured successfully!!!''', subject: 'Hi This is for email configuration in jenkins', to: 'susmithasathi98@gmail.com'
             }
