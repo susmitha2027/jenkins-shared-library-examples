@@ -13,11 +13,7 @@ def call(String repoUrl) {
             url: "${repoUrl}"
         }
       }
-      stage("build") {
-        //steps {
-         // bat './gradlew clean build'
-        //}
-      }
+     
       stage('read') {
            steps {
                script {
