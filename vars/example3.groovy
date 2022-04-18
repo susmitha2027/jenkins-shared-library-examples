@@ -22,17 +22,19 @@ def call(String repoUrl) {
            steps {
                script {
                    
-                    def data = readCSV file: 'Jenkins_CaseStudy.xlsx')
+                    def data = readCSV file: 'Jenkins_CaseStudy.xlsx',format:excelFormat
+                    def op = data.toString()
+                    println(op)
                     println(data)
-                   println "The file has ${data.length()} bytes"
-                   def csv = '''Name,Lastname
-                                Susmitha,Sathi
-                                Naveen,Ganta'''
+                   //println "The file has ${data.length()} bytes"
+//                    def csv = '''Name,Lastname
+//                                 Susmitha,Sathi
+//                                 Naveen,Ganta'''
 
-                   def data1 = new CsvParser().parse(csv)
-                   for(line in data1) {
-                        println "$line.Name $line.Lastname"
-                    }
+//                    def data1 = new CsvParser().parse(csv)
+//                    for(line in data1) {
+//                         println "$line.Name $line.Lastname"
+//                     }
            }
        }
       }
